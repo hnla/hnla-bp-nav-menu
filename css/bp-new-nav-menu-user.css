@@ -1,0 +1,68 @@
+/**
+* This file provides basic generic styles for the new BP user account nav menus
+* bp_nav_menu()
+* 
+* This file is enqueued via your themes functions file if you have added the 
+* custom folder /member/single/ along with the associated files modified to use bp_nav_menu()
+*/
+
+/*__ Reset inherited bp styling __*/
+
+#buddypress #object-nav {
+	overflow: visible;
+	}
+#buddypress #item-body {
+	clear: both;
+	margin-top: 3em;
+	}
+/*__ Style new bp_nav_menu() __*/
+
+#buddypress #item-nav {
+	display: table;
+	width: 100%;
+	}
+ul#menu-bp {
+	position: relative;
+	display:table;
+	width: 100%;
+	} 
+#menu-bp li {
+	padding: .2em 0;
+	position: static; /* reset inherited values */
+	}
+#buddypress #menu-bp li li {
+	display: inline-block;
+	float: none;
+	}
+#menu-bp li ul.sub-menu {
+	visibility: hidden;
+	height: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	}
+#menu-bp li.current-menu-parent ul.sub-menu {
+	visibility: visible;
+	height: auto;	
+	width: 100%;
+	}
+	
+/* Nav filters */
+#item-nav .filter {
+	float: right;
+	right: 10px;
+	top: .1em;
+	position: relative;
+	z-index: 500;
+	}
+#item-nav .filter label {
+	display: block;
+	font-size: small;
+	line-height: 1;
+	}
+#buddypress .message-search.filter {
+	margin: 3em 0 0 0;
+	}
+#buddypress .message-search.filter label {
+	display: inline;
+	}
