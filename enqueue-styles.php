@@ -1,3 +1,17 @@
+<?php
+/**
+* Enqueue new nav styles 
+* Checking which BP dirs are in use in theme
+*/
+
+/*
+* Uncomment stylesheet type to use
+*/
+//$style_selection = 'bp-new-nav-menu-flyout.css';
+//$stylechoice = ;
+
+define(STYLE_SELECTION, $style_selection);
+
 if( !  function_exists( 'bp_new_user_nav_enqueue_styling' ) ) {
 	function bp_new_user_nav_enqueue_styling() {
 			
@@ -8,8 +22,11 @@ if( !  function_exists( 'bp_new_user_nav_enqueue_styling' ) ) {
 }
 if( ! function_exists( 'bp_new_nav_styles' ) ) {
 	function bp_new_nav_styles() {
-		// file name
-		$file_name = 'bp-new-nav-menu-user.css' ;
+		
+		$style_selection = STYLE_SELECTION;
+		
+		// file name: from user selection define or default to...
+		$file_name = ( !empty($style_selection) )? $style_selection : 'bp-new-nav-menu-user.css' ;
 		// version file suffix
 		$ver = bp_get_version();
 		
@@ -33,3 +50,4 @@ if( ! function_exists( 'bp_new_nav_styles' ) ) {
 		wp_enqueue_style( $handle, $location . $file_name, array(), $ver, 'screen' );
 	}	
 }
+?>
