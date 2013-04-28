@@ -29,3 +29,7 @@ Into your new top level  you will copy the extracted /members/single/*.* files  
 plus the /css/ folder mentioned above
 
 The final step is to open the file enqueue-styles.php in your fav editor copy it's contents and paste into a suitable position in your themes functions.php file.
+or in branch dev-1.1 add these lines to functions.php to rquire the enqueue-styles.php file ( after branch merge to master  this is the easier approach?
+
+$bp_dir = is_dir('buddypress') ? 'buddypress' : 'community';
+locate_template( array( $bp_dir . '/enqueue-styles.php' ), true, true );
