@@ -5,10 +5,10 @@
 */
 
 /*
-* Uncomment stylesheet type to use
+* Uncomment stylesheet to use - test layouts / effects
 */
-//$style_selection = 'bp-new-nav-menu-flyout.css';
-//$stylechoice = ;
+//$style_selection = 'bp-new-nav-menu-hover-show.css';
+//$style_selection = 'bp-new-nav-menu-vert.css';
 
 define(STYLE_SELECTION, $style_selection);
 

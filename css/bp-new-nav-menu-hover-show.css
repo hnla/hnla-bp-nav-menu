@@ -6,6 +6,9 @@
 * custom folder /member/single/ along with the associated files modified to use bp_nav_menu()
 */
 
+/*
+* This stylesheet modifies the parent li so on hover/focus we can see submenus available
+*/
 /*__ Reset inherited bp styling __*/
 
 #buddypress #object-nav {
@@ -16,7 +19,6 @@
 	margin-top: 4em;
 	}
 /*__ Style new bp_nav_menu() __*/
-
 #buddypress #item-nav {
 	display: table;
 	width: 100%;
@@ -35,14 +37,25 @@ ul#menu-bp {
 	float: none;
 	}
 #menu-bp li ul.sub-menu {
-	visibility: hidden;
 	height: 0;
 	position: absolute;
 	top: 100%;
+	left: -999em;
+	}
+#menu-bp li:focus ul.sub-menu,
+#menu-bp li:hover ul.sub-menu {
+	background: #fff;
 	left: 0;
+	height: auto;	
+	width: 100%;
+	z-index: 1000;
+	}
+#menu-bp li.current-menu-parent:focus ul.sub-menu,
+#menu-bp li.current-menu-parent:hover ul.sub-menu {
+	z-index: 500;
 	}
 #menu-bp li.current-menu-parent ul.sub-menu {
-	visibility: visible;
+	left: 0;
 	height: auto;	
 	width: 100%;
 	}
@@ -53,7 +66,7 @@ ul#menu-bp {
 	right: 10px;
 	top: .1em;
 	position: relative;
-	z-index: 500;
+	z-index: 800;
 	}
 #item-nav .filter label {
 	display: block;

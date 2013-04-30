@@ -1,0 +1,106 @@
+/**
+* This file provides basic generic styles for the new BP user account nav menus
+* bp_nav_menu()
+* 
+* This file is enqueued via your themes functions file if you have added the 
+* custom folder /member/single/ along with the associated files modified to use bp_nav_menu()
+*/
+
+/*
+* This stylesheet re-works #item-nav and menu to be vertically arranged
+*/
+
+/*__ Reset inherited bp styling __*/
+#buddypress #item-header {margin-bottom: 2em; }
+#buddypress div#item-nav {
+	float: left;
+	width: 40%;
+	}
+#buddypress #object-nav {
+	overflow: visible;
+	}
+#buddypress #item-body {
+	float: right;
+	width: 58%;
+	}
+/* padding for filter elements */
+.my-activity #buddypress #object-nav,
+.my-blogs #buddypress #object-nav,
+.my-messages #buddypress #object-nav,
+.my-friends #buddypress #object-nav,
+.my-account.forums #buddypress #object-nav {
+	padding-top: 2.5em;
+	position: relative;
+	}
+/*__ Style new bp_nav_menu() __*/
+#buddypress #item-nav {
+	display: table;
+	width: 100%;
+	}
+ul#menu-bp {
+	position: relative;
+	display: table;
+	width: 50%;
+	} 
+#buddypress #menu-bp li {
+	float: none;
+	padding: .2em 0;
+	position: static; /* reset inherited values */
+	width: 100%;
+	}
+#buddypress #menu-bp li span {
+	float: right; 
+	margin-right: 7px;
+	width: 10px;
+	}
+#buddypress #menu-bp li a {
+	opacity: .6;
+	padding-left: 0;
+	}
+#buddypress #menu-bp li a:focus,
+#buddypress #menu-bp li a:hover {
+	opacity: 1;
+	}
+#buddypress #menu-bp li.current-menu-parent > a,
+#buddypress #menu-bp li.current-menu-item a {
+	font-weight: bold;
+	opacity: 1;
+	}
+#buddypress #menu-bp li.current-menu-parent > a:after,
+#buddypress #menu-bp li.current-menu-item a:after {
+	content: '  >>';
+	vertical-align: middle;
+	}
+#buddypress #menu-bp li li a {
+	word-wrap: normal;
+	}
+#menu-bp li ul.sub-menu {
+	visibility: hidden;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	}
+#menu-bp li.current-menu-parent ul.sub-menu {
+	visibility: visible;
+	height: auto;
+	}
+
+/* Nav filters */
+#item-nav .filter {
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 500;
+	}
+#item-nav .filter label {
+	font-size: small;
+	line-height: 1;
+	}
+#buddypress .message-search.filter {
+	margin: 0;
+	}
+#buddypress .message-search.filter label {
+	display: inline;
+	}
