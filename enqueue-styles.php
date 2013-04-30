@@ -8,7 +8,7 @@
 * Uncomment stylesheet to use - test layouts / effects
 */
 //$style_selection = 'bp-new-nav-menu-hover-show.css';
-//$style_selection = 'bp-new-nav-menu-vert.css';
+$style_selection = 'bp-new-nav-menu-vert.css';
 
 define(STYLE_SELECTION, $style_selection);
 
