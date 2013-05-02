@@ -10,7 +10,7 @@
 //$style_selection = 'bp-new-nav-menu-hover-show.css';
 $style_selection = 'bp-new-nav-menu-vert.css';
 
-define(STYLE_SELECTION, $style_selection);
+define('STYLE_SELECTION', $style_selection);
 
 if( !  function_exists( 'bp_new_user_nav_enqueue_styling' ) ) {
 	function bp_new_user_nav_enqueue_styling() {
