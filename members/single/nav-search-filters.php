@@ -10,7 +10,7 @@
 * display selected markup function.
 */
 
-	if( !bp_is_my_profile() )
+	if( !bp_is_user() )
 		return;
 	
 	$bp_page_component = bp_current_component();
